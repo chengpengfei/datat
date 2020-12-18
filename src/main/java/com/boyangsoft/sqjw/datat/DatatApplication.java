@@ -10,7 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DatatApplication implements CommandLineRunner {
 
     public void run(String... args) throws Exception {
-        System.out.println("程序实际上的入口在这里。"+this.bzdzService.transfer());
+        /**
+         * 迁移各类数据
+         */
+        this.bzdzService.transferXzqh();//迁移行政区划脚本
+
     }
 
     public static void main(String[] args) {
